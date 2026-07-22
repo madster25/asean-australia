@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>About — ASEAN Australia Association</title>
-<meta name="description" content="An independent, member-led organisation connecting businesses, institutions and people across ASEAN and Australia.">
+<title>Contact — ASEAN Australia Association</title>
+<meta name="description" content="Get in touch about membership, partnerships, events or media. We would love to hear from you.">
 <meta name="theme-color" content="#16324F">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="ASEAN Australia Association">
-<meta property="og:title" content="About — ASEAN Australia Association">
-<meta property="og:description" content="An independent, member-led organisation connecting businesses, institutions and people across ASEAN and Australia.">
+<meta property="og:title" content="Contact — ASEAN Australia Association">
+<meta property="og:description" content="Get in touch about membership, partnerships, events or media. We would love to hear from you.">
 <meta property="og:image" content="assets/logo.jpg">
 <meta name="twitter:card" content="summary">
 <script src="./support.js"></script>
@@ -26,8 +26,11 @@
   body { margin: 0; background: #F7F6F2; }
   a { color: #B3262D; text-decoration: none; }
   a:hover { color: #16324F; }
-  .card-lift { transition: transform .35s cubic-bezier(.2,.7,.2,1), box-shadow .35s ease; }
-  .card-lift:hover { transform: translateY(-6px); box-shadow: 0 28px 56px -24px rgba(22,50,79,.30); }
+  .btn { transition: transform .2s ease, box-shadow .2s ease; cursor:pointer; text-decoration:none; }
+  .btn:hover { transform: translateY(-2px); box-shadow: 0 14px 26px -12px rgba(179,38,45,.6); }
+  .fld { width:100%; border:1.5px solid rgba(22,50,79,.16); background:#fff; border-radius:10px; padding:14px 16px; font-size:15px; font-family:'Hanken Grotesk',sans-serif; color:#232B35; transition: border-color .2s ease, box-shadow .2s ease; }
+  .fld:focus { outline:none; border-color:#16324F; box-shadow:0 0 0 3px rgba(22,50,79,.1); }
+  .fld::placeholder { color:#9aa1a9; }
   .ph { background-color:#E9EDF2; background-image: repeating-linear-gradient(135deg, rgba(22,50,79,.07) 0 14px, rgba(22,50,79,.02) 14px 28px); position:relative; overflow:hidden; }
   .ph-label { position:absolute; left:18px; bottom:16px; font-family:ui-monospace,'SF Mono',Menlo,monospace; font-size:12px; letter-spacing:.03em; color:rgba(22,50,79,.6); background:rgba(247,246,242,.8); padding:5px 9px; border-radius:5px; }
   a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible { outline: 3px solid #B3262D; outline-offset: 2px; border-radius: 4px; }
@@ -60,58 +63,72 @@
 </helmet>
 
 <div style="font-family:'Hanken Grotesk',system-ui,sans-serif;color:#232B35;overflow-x:hidden;">
-  <dc-import name="Nav" active="about" hint-size="100%,76px"></dc-import>
+  <dc-import name="Nav" active="contact" hint-size="100%,76px"></dc-import>
 
   <!-- PAGE HEADER -->
-  <div style="max-width:1240px;margin:0 auto;padding:150px 48px 60px;">
-    <div style="max-width:820px;">
-      <div style="font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#B3262D;margin-bottom:16px;">About Us</div>
-      <h1 style="font-family:'Newsreader',serif;font-weight:500;font-size:56px;line-height:1.04;letter-spacing:-.02em;color:#16324F;margin:0 0 22px;text-wrap:balance;">An independent bridge between two thriving regions</h1>
-      <p style="font-size:19px;line-height:1.6;color:#3d4650;margin:0;max-width:680px;">The ASEAN Australia Association is a member-led organisation connecting the businesses, institutions and people building the future of the region, together.</p>
+  <div style="max-width:1240px;margin:0 auto;padding:150px 48px 44px;">
+    <div style="max-width:760px;">
+      <div style="font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#B3262D;margin-bottom:16px;">Contact</div>
+      <h1 style="font-family:'Newsreader',serif;font-weight:500;font-size:56px;line-height:1.04;letter-spacing:-.02em;color:#16324F;margin:0 0 22px;text-wrap:balance;">Let's start a conversation</h1>
+      <p style="font-size:19px;line-height:1.6;color:#3d4650;margin:0;max-width:600px;">Membership enquiries, partnerships, events or press. We'd love to hear from you.</p>
     </div>
   </div>
 
-  <!-- MISSION + VISION -->
-  <div style="max-width:1240px;margin:0 auto;padding:40px 48px 20px;">
-    <div data-reveal style="display:grid;grid-template-columns:1fr 1fr;gap:20px;">
-      <div style="background:#fff;border:1px solid rgba(22,50,79,.09);border-radius:18px;padding:44px 40px;">
-        <div style="width:46px;height:46px;border-radius:12px;background:#E9EDF2;display:flex;align-items:center;justify-content:center;margin-bottom:22px;"><div style="width:18px;height:18px;border-radius:50%;border:2.5px solid #16324F;"></div></div>
-        <div style="font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#B3262D;margin-bottom:12px;">Mission</div>
-        <p style="font-family:'Newsreader',serif;font-size:25px;line-height:1.35;color:#16324F;margin:0;">To help members build trusted relationships and create real opportunities across ASEAN and Australia.</p>
+  <!-- FORM + INFO -->
+  <div style="max-width:1240px;margin:0 auto;padding:24px 48px 40px;">
+    <div style="display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:start;">
+      <!-- FORM -->
+      <div style="background:#fff;border:1px solid rgba(22,50,79,.09);border-radius:20px;padding:44px 44px 40px;">
+        <form ref="{{ formRef }}" novalidate="" style="margin:0;">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:18px;">
+            <div><label for="cf-first" style="display:block;font-size:13px;font-weight:600;color:#16324F;margin-bottom:8px;">First name</label><input id="cf-first" name="first" class="fld" type="text" autocomplete="given-name" required="required" placeholder="Jane"></div>
+            <div><label for="cf-last" style="display:block;font-size:13px;font-weight:600;color:#16324F;margin-bottom:8px;">Last name</label><input id="cf-last" name="last" class="fld" type="text" autocomplete="family-name" required="required" placeholder="Tan"></div>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:18px;">
+            <div><label for="cf-email" style="display:block;font-size:13px;font-weight:600;color:#16324F;margin-bottom:8px;">Email</label><input id="cf-email" name="email" class="fld" type="email" autocomplete="email" required="required" placeholder="jane@company.com"></div>
+            <div><label for="cf-org" style="display:block;font-size:13px;font-weight:600;color:#16324F;margin-bottom:8px;">Organisation</label><input id="cf-org" name="org" class="fld" type="text" autocomplete="organization" placeholder="Company or institution"></div>
+          </div>
+          <div style="margin-bottom:18px;">
+            <label for="cf-interest" style="display:block;font-size:13px;font-weight:600;color:#16324F;margin-bottom:8px;">I'm interested in</label>
+            <select id="cf-interest" name="interest" class="fld"><option>Becoming a member</option><option>Partnership &amp; sponsorship</option><option>Events &amp; trade missions</option><option>Press &amp; media</option><option>Something else</option></select>
+          </div>
+          <div style="margin-bottom:26px;">
+            <label for="cf-message" style="display:block;font-size:13px;font-weight:600;color:#16324F;margin-bottom:8px;">Message</label>
+            <textarea id="cf-message" name="message" class="fld" rows="5" required="required" placeholder="Tell us a little about what you're looking for…" style="resize:vertical;"></textarea>
+          </div>
+          <div ref="{{ errRef }}" role="alert" style="display:none;font-size:14px;color:#B3262D;margin-bottom:16px;">Please complete the required fields with a valid email.</div>
+          <button type="submit" class="btn" style="background:#B3262D;color:#fff;font-weight:600;font-size:16px;padding:16px 32px;border-radius:11px;border:none;font-family:inherit;cursor:pointer;">Send message</button>
+        </form>
+        <div ref="{{ okRef }}" role="status" style="display:none;text-align:center;padding:28px 8px;">
+          <div style="width:52px;height:52px;border-radius:50%;background:#eaf3ec;display:flex;align-items:center;justify-content:center;margin:0 auto 18px;"><span aria-hidden="true" style="color:#2f7d4f;font-size:26px;line-height:1;">&#10003;</span></div>
+          <div style="font-family:'Newsreader',serif;font-size:24px;color:#16324F;margin-bottom:8px;">Thank you &mdash; message sent</div>
+          <div style="font-size:15px;color:#4a5560;line-height:1.6;max-width:360px;margin:0 auto;">We&#39;ve received your enquiry and will be in touch shortly.</div>
+        </div>
       </div>
-      <div style="background:#16324F;border-radius:18px;padding:44px 40px;">
-        <div style="width:46px;height:46px;border-radius:12px;background:rgba(255,255,255,.12);display:flex;align-items:center;justify-content:center;margin-bottom:22px;"><div style="width:18px;height:18px;border-radius:4px;border:2.5px solid #fff;"></div></div>
-        <div style="font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#ff8a8f;margin-bottom:12px;">Vision</div>
-        <p style="font-family:'Newsreader',serif;font-size:25px;line-height:1.35;color:#fff;margin:0;">A region where business, ideas and people move freely, and prosperity is shared.</p>
+
+      <!-- INFO -->
+      <div style="display:flex;flex-direction:column;gap:18px;">
+        <div style="background:#16324F;border-radius:18px;padding:34px 32px;">
+          <div style="font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#ff8a8f;margin-bottom:16px;">Get in touch</div>
+          <div style="display:flex;flex-direction:column;gap:16px;">
+            <div><div style="font-size:13px;color:rgba(247,246,242,.6);margin-bottom:3px;">Email</div><div style="font-size:16px;font-weight:600;color:#fff;">hello@asean.org.au</div></div>
+          </div>
+        </div>
+        <div style="background:#fff;border:1px solid rgba(22,50,79,.09);border-radius:18px;padding:30px 32px;">
+          <div style="font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#B3262D;margin-bottom:16px;">Offices</div>
+          <div style="display:flex;flex-direction:column;gap:16px;">
+            <div><div style="font-weight:700;font-size:16px;color:#16324F;">Sydney</div><div style="font-size:14px;color:#5c6570;line-height:1.5;margin-top:3px;">Level 57, 25 Martin Place<br>Sydney NSW 2000, Australia</div></div>
+          </div>
+        </div>
+        <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=1200&q=80" alt="Map of offices" style="width:100%;object-fit:cover;display:block;height:180px;border-radius:18px;">
       </div>
     </div>
   </div>
 
-  <!-- WHO WE ARE + MAP -->
-  <div style="max-width:1240px;margin:0 auto;padding:64px 48px;">
-    <div data-reveal style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;">
-      <div>
-        <div style="font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#B3262D;margin-bottom:14px;">Who we are</div>
-        <h2 style="font-weight:700;font-size:34px;line-height:1.1;letter-spacing:-.02em;color:#16324F;margin:0 0 18px;">Independent, non-partisan and member-led</h2>
-        <p style="font-size:16.5px;line-height:1.65;color:#4a5560;margin:0 0 16px;">We are not a government body or a consulting firm. We are a community of businesses, professionals, entrepreneurs, investors, universities and institutions who believe the ASEAN–Australia relationship is one of the most important of the century.</p>
-        <p style="font-size:16.5px;line-height:1.65;color:#4a5560;margin:0;">Our work is simple: open doors, share knowledge and connect businesses, leaders and communities across ASEAN and Australia.</p>
-      </div>
-      <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1400&q=80" alt="Global connections" style="width:100%;object-fit:cover;display:block;height:400px;border-radius:16px;">
-    </div>
-  </div>
-
-
-  <!-- OUR IMPACT -->
-  <div style="max-width:1240px;margin:0 auto;padding:84px 48px;">
-    <div style="max-width:600px;margin-bottom:34px;">
-      <div style="font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#B3262D;margin-bottom:12px;">Our impact</div>
-      <h2 style="font-weight:700;font-size:36px;color:#16324F;line-height:1.08;letter-spacing:-.02em;margin:0;">Measured in relationships, not headlines</h2>
-    </div>
-    <div data-reveal style="display:grid;grid-template-columns:repeat(4,1fr);gap:20px;">
-      <div style="background:#fff;border:1px solid rgba(22,50,79,.09);border-radius:14px;padding:30px 24px;"><div style="font-family:'Newsreader',serif;font-size:44px;color:#16324F;line-height:1;">650+</div><div style="font-size:14px;color:#5c6570;margin-top:10px;">Active members across the region</div></div>
-      <div style="background:#fff;border:1px solid rgba(22,50,79,.09);border-radius:14px;padding:30px 24px;"><div style="font-family:'Newsreader',serif;font-size:44px;color:#16324F;line-height:1;">120+</div><div style="font-size:14px;color:#5c6570;margin-top:10px;">Partner institutions &amp; universities</div></div>
-      <div style="background:#fff;border:1px solid rgba(22,50,79,.09);border-radius:14px;padding:30px 24px;"><div style="font-family:'Newsreader',serif;font-size:44px;color:#16324F;line-height:1;">10+</div><div style="font-size:14px;color:#5c6570;margin-top:10px;">Events, forums &amp; missions a year</div></div>
-      <div style="background:#fff;border:1px solid rgba(22,50,79,.09);border-radius:14px;padding:30px 24px;"><div style="font-family:'Newsreader',serif;font-size:44px;color:#16324F;line-height:1;">11</div><div style="font-size:14px;color:#5c6570;margin-top:10px;">Nations actively connected</div></div>
+  <div style="max-width:1240px;margin:0 auto;padding:20px 48px 84px;">
+    <div style="border-top:1px solid rgba(22,50,79,.1);padding-top:36px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;">
+      <div style="font-size:16px;color:#4a5560;">Prefer to join straight away?</div>
+      <a class="btn" href="Membership.dc.html" style="background:#16324F;color:#fff;font-weight:600;font-size:15px;padding:15px 30px;border-radius:10px;">Become a Member</a>
     </div>
   </div>
 
@@ -120,14 +137,24 @@
 </x-dc>
 <script type="text/x-dc" data-dc-script>
 class Component extends DCLogic {
+  constructor(props){ super(props); this.formRef = React.createRef(); this.okRef = React.createRef(); this.errRef = React.createRef(); }
   componentDidMount(){
-    const els = Array.from(document.querySelectorAll('[data-reveal]'));
-    if(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches){ els.forEach(el=>{el.style.opacity='1';el.style.transform='none';}); return; }
-    els.forEach(el => { el.style.opacity='0'; el.style.transform='translateY(22px)'; el.style.transition='opacity .7s cubic-bezier(.2,.7,.2,1), transform .7s cubic-bezier(.2,.7,.2,1)'; });
-    if(!('IntersectionObserver' in window)){ els.forEach(el=>{el.style.opacity='1';el.style.transform='none';}); return; }
-    const io = new IntersectionObserver((entries)=>{ entries.forEach(e=>{ if(e.isIntersecting){ e.target.style.opacity='1'; e.target.style.transform='none'; io.unobserve(e.target); } }); }, {threshold:.12});
-    els.forEach(el=>io.observe(el));
+    const form = this.formRef.current, ok = this.okRef.current, err = this.errRef.current;
+    if(!form) return;
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      if(!form.checkValidity()){
+        if(err) err.style.display = 'block';
+        const bad = form.querySelector(':invalid');
+        if(bad) bad.focus();
+        return;
+      }
+      if(err) err.style.display = 'none';
+      form.style.display = 'none';
+      if(ok){ ok.style.display = 'block'; ok.focus && ok.focus(); }
+    });
   }
+  renderVals(){ return { formRef: this.formRef, okRef: this.okRef, errRef: this.errRef }; }
 }
 </script>
 </body>

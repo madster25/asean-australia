@@ -1,160 +1,88 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Contact — ASEAN Australia Association</title>
-<meta name="description" content="Get in touch about membership, partnerships, events or media. We would love to hear from you.">
-<meta name="theme-color" content="#16324F">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="ASEAN Australia Association">
-<meta property="og:title" content="Contact — ASEAN Australia Association">
-<meta property="og:description" content="Get in touch about membership, partnerships, events or media. We would love to hear from you.">
-<meta property="og:image" content="assets/logo.jpg">
-<meta name="twitter:card" content="summary">
 <script src="./support.js"></script>
 </head>
 <body>
 <x-dc>
 <helmet>
-<link rel="icon" type="image/jpeg" href="assets/logo.jpg">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-  * { box-sizing: border-box; }
-  body { margin: 0; background: #F7F6F2; }
-  a { color: #B3262D; text-decoration: none; }
-  a:hover { color: #16324F; }
-  .btn { transition: transform .2s ease, box-shadow .2s ease; cursor:pointer; text-decoration:none; }
-  .btn:hover { transform: translateY(-2px); box-shadow: 0 14px 26px -12px rgba(179,38,45,.6); }
-  .fld { width:100%; border:1.5px solid rgba(22,50,79,.16); background:#fff; border-radius:10px; padding:14px 16px; font-size:15px; font-family:'Hanken Grotesk',sans-serif; color:#232B35; transition: border-color .2s ease, box-shadow .2s ease; }
-  .fld:focus { outline:none; border-color:#16324F; box-shadow:0 0 0 3px rgba(22,50,79,.1); }
-  .fld::placeholder { color:#9aa1a9; }
-  .ph { background-color:#E9EDF2; background-image: repeating-linear-gradient(135deg, rgba(22,50,79,.07) 0 14px, rgba(22,50,79,.02) 14px 28px); position:relative; overflow:hidden; }
-  .ph-label { position:absolute; left:18px; bottom:16px; font-family:ui-monospace,'SF Mono',Menlo,monospace; font-size:12px; letter-spacing:.03em; color:rgba(22,50,79,.6); background:rgba(247,246,242,.8); padding:5px 9px; border-radius:5px; }
-  a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible { outline: 3px solid #B3262D; outline-offset: 2px; border-radius: 4px; }
-  @media (prefers-reduced-motion: reduce) {
-    *, *::before, *::after { transition-duration: .001ms !important; animation-duration: .001ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; }
-    [data-reveal] { opacity: 1 !important; transform: none !important; }
-  }
-  @media (max-width: 960px) {
-    [style*="repeat(4, 1fr)"], [style*="repeat(3, 1fr)"] { grid-template-columns: repeat(2,1fr) !important; }
-    [style*="1.05fr 0.95fr"], [style*="grid-template-columns: 1fr 1fr"], [style*="1.15fr 0.85fr"], [style*="1.2fr 0.8fr"], [style*="1.2fr 0.8fr"], [style*="grid-template-columns: 1.3fr"], [style*="0.9fr 1.1fr"] { grid-template-columns: 1fr !important; }
-    [style*="1.5fr 1fr 1fr 1.5fr"] { grid-template-columns: 1fr 1fr !important; }
-    [style*="height: 640px"] { height: 380px !important; }
-    [style*="height: 460px"] { height: 300px !important; }
-  }
-  @media (max-width: 760px) {
-    [style*="max-width: 1240px"] { padding-left: 24px !important; padding-right: 24px !important; }
-    [style*="padding: 150px 48px"] { padding-top: 108px !important; }
-    [style*="padding: 150px 56px 96px 48px"] { padding: 108px 24px 40px !important; }
-  }
-  @media (max-width: 640px) {
-    [style*="repeat(4, 1fr)"], [style*="repeat(3, 1fr)"], [style*="repeat(2, 1fr)"], [style*="1.5fr 1fr 1fr 1.5fr"] { grid-template-columns: 1fr !important; }
-    [style*="font-size: 62px"] { font-size: 36px !important; }
-    [style*="font-size: 56px"] { font-size: 33px !important; }
-    [style*="font-size: 48px"] { font-size: 31px !important; }
-    [style*="font-size: 46px"] { font-size: 30px !important; }
-    [style*="font-size: 42px"] { font-size: 29px !important; }
-    [style*="font-size: 40px"] { font-size: 28px !important; }
-  }
+  .fcol-link { color: rgba(247,246,242,.82); text-decoration:none; transition: color .2s ease; }
+  .fcol-link:hover { color:#fff; }
+  .f-join { transition: transform .2s ease, box-shadow .2s ease; cursor:pointer; }
+  .f-join:hover { transform: translateY(-2px); box-shadow: 0 12px 22px -10px rgba(179,38,45,.7); }
+  .f-social { transition: background .2s ease; cursor:pointer; text-decoration:none; }
+  .f-social:hover { background: rgba(255,255,255,.22); }
+  .f-news::placeholder { color: rgba(247,246,242,.55); }
 </style>
 </helmet>
-
-<div style="font-family:'Hanken Grotesk',system-ui,sans-serif;color:#232B35;overflow-x:hidden;">
-  <dc-import name="Nav" active="contact" hint-size="100%,76px"></dc-import>
-
-  <!-- PAGE HEADER -->
-  <div style="max-width:1240px;margin:0 auto;padding:150px 48px 44px;">
-    <div style="max-width:760px;">
-      <div style="font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#B3262D;margin-bottom:16px;">Contact</div>
-      <h1 style="font-family:'Newsreader',serif;font-weight:500;font-size:56px;line-height:1.04;letter-spacing:-.02em;color:#16324F;margin:0 0 22px;text-wrap:balance;">Let's start a conversation</h1>
-      <p style="font-size:19px;line-height:1.6;color:#3d4650;margin:0;max-width:600px;">Membership enquiries, partnerships, events or press. We'd love to hear from you.</p>
-    </div>
-  </div>
-
-  <!-- FORM + INFO -->
-  <div style="max-width:1240px;margin:0 auto;padding:24px 48px 40px;">
-    <div style="display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:start;">
-      <!-- FORM -->
-      <div style="background:#fff;border:1px solid rgba(22,50,79,.09);border-radius:20px;padding:44px 44px 40px;">
-        <form ref="{{ formRef }}" novalidate="" style="margin:0;">
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:18px;">
-            <div><label for="cf-first" style="display:block;font-size:13px;font-weight:600;color:#16324F;margin-bottom:8px;">First name</label><input id="cf-first" name="first" class="fld" type="text" autocomplete="given-name" required="required" placeholder="Jane"></div>
-            <div><label for="cf-last" style="display:block;font-size:13px;font-weight:600;color:#16324F;margin-bottom:8px;">Last name</label><input id="cf-last" name="last" class="fld" type="text" autocomplete="family-name" required="required" placeholder="Tan"></div>
-          </div>
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:18px;">
-            <div><label for="cf-email" style="display:block;font-size:13px;font-weight:600;color:#16324F;margin-bottom:8px;">Email</label><input id="cf-email" name="email" class="fld" type="email" autocomplete="email" required="required" placeholder="jane@company.com"></div>
-            <div><label for="cf-org" style="display:block;font-size:13px;font-weight:600;color:#16324F;margin-bottom:8px;">Organisation</label><input id="cf-org" name="org" class="fld" type="text" autocomplete="organization" placeholder="Company or institution"></div>
-          </div>
-          <div style="margin-bottom:18px;">
-            <label for="cf-interest" style="display:block;font-size:13px;font-weight:600;color:#16324F;margin-bottom:8px;">I'm interested in</label>
-            <select id="cf-interest" name="interest" class="fld"><option>Becoming a member</option><option>Partnership &amp; sponsorship</option><option>Events &amp; trade missions</option><option>Press &amp; media</option><option>Something else</option></select>
-          </div>
-          <div style="margin-bottom:26px;">
-            <label for="cf-message" style="display:block;font-size:13px;font-weight:600;color:#16324F;margin-bottom:8px;">Message</label>
-            <textarea id="cf-message" name="message" class="fld" rows="5" required="required" placeholder="Tell us a little about what you're looking for…" style="resize:vertical;"></textarea>
-          </div>
-          <div ref="{{ errRef }}" role="alert" style="display:none;font-size:14px;color:#B3262D;margin-bottom:16px;">Please complete the required fields with a valid email.</div>
-          <button type="submit" class="btn" style="background:#B3262D;color:#fff;font-weight:600;font-size:16px;padding:16px 32px;border-radius:11px;border:none;font-family:inherit;cursor:pointer;">Send message</button>
+<div style="background:#16324F;color:#F7F6F2;font-family:'Hanken Grotesk',system-ui,sans-serif;">
+  <div style="max-width:1240px;margin:0 auto;padding:72px 48px 40px;">
+    <div style="display:grid;grid-template-columns:1.5fr 1fr 1fr 1.5fr;gap:44px;padding-bottom:44px;border-bottom:1px solid rgba(255,255,255,.14);">
+      <div>
+        <div style="display:flex;align-items:center;gap:11px;margin-bottom:18px;">
+          <img src="assets/logo.jpg" alt="ASEAN Australia Association" style="width:44px;height:44px;border-radius:50%;display:block;object-fit:cover;background:#fff;">
+          <div style="font-weight:700;font-size:17px;">ASEAN Australia Association</div>
+        </div>
+        <div style="font-size:14.5px;line-height:1.65;color:rgba(247,246,242,.72);max-width:290px;">Where business, ideas and people come together across ASEAN and Australia.</div>
+        <div style="display:flex;gap:10px;margin-top:22px;">
+          <a class="f-social" href="https://www.linkedin.com" target="_blank" rel="noopener" aria-label="ASEAN Australia Association on LinkedIn" style="width:38px;height:38px;border-radius:9px;background:rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:600;color:#fff;">in</a>
+          <a class="f-social" href="https://x.com" target="_blank" rel="noopener" aria-label="ASEAN Australia Association on X" style="width:38px;height:38px;border-radius:9px;background:rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:600;color:#fff;">X</a>
+          <a class="f-social" href="https://www.instagram.com" target="_blank" rel="noopener" aria-label="ASEAN Australia Association on Instagram" style="width:38px;height:38px;border-radius:9px;background:rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:600;color:#fff;">IG</a>
+        </div>
+      </div>
+      <div>
+        <div style="font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#ff8a8f;margin-bottom:16px;">Quick Links</div>
+        <div style="display:flex;flex-direction:column;gap:11px;font-size:14.5px;">
+          <a class="fcol-link" href="About.dc.html">About Us</a>
+          <a class="fcol-link" href="Connect.dc.html">Connect &amp; Grow</a>
+          <a class="fcol-link" href="Events.dc.html">Events</a>
+          <a class="fcol-link" href="Membership.dc.html">Membership</a>
+          <a class="fcol-link" href="Contact.dc.html">Contact</a>
+        </div>
+      </div>
+      <div>
+        <div style="font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#ff8a8f;margin-bottom:16px;">Contact</div>
+        <div style="display:flex;flex-direction:column;gap:11px;font-size:14.5px;color:rgba(247,246,242,.82);">
+          <span>Sydney</span>
+          <span>hello@asean.org.au</span>
+          <span style="color:rgba(247,246,242,.6);margin-top:8px;">Partners &amp; Sponsors</span>
+        </div>
+      </div>
+      <div>
+        <div style="font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#ff8a8f;margin-bottom:16px;">Newsletter</div>
+        <div style="font-size:14.5px;color:rgba(247,246,242,.72);margin-bottom:16px;line-height:1.6;">Regional insight and opportunities, once a month.</div>
+        <form ref="{{ newsRef }}" novalidate="" style="display:flex;gap:8px;margin:0;">
+          <input class="f-news" type="email" required="required" autocomplete="email" aria-label="Your email address" placeholder="you@company.com" style="flex:1;min-width:0;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:9px;padding:12px 14px;font-size:13.5px;color:#fff;font-family:inherit;">
+          <button type="submit" class="f-join" style="background:#B3262D;color:#fff;font-weight:600;font-size:13.5px;padding:12px 18px;border-radius:9px;border:none;font-family:inherit;cursor:pointer;">Join</button>
         </form>
-        <div ref="{{ okRef }}" role="status" style="display:none;text-align:center;padding:28px 8px;">
-          <div style="width:52px;height:52px;border-radius:50%;background:#eaf3ec;display:flex;align-items:center;justify-content:center;margin:0 auto 18px;"><span aria-hidden="true" style="color:#2f7d4f;font-size:26px;line-height:1;">&#10003;</span></div>
-          <div style="font-family:'Newsreader',serif;font-size:24px;color:#16324F;margin-bottom:8px;">Thank you &mdash; message sent</div>
-          <div style="font-size:15px;color:#4a5560;line-height:1.6;max-width:360px;margin:0 auto;">We&#39;ve received your enquiry and will be in touch shortly.</div>
-        </div>
-      </div>
-
-      <!-- INFO -->
-      <div style="display:flex;flex-direction:column;gap:18px;">
-        <div style="background:#16324F;border-radius:18px;padding:34px 32px;">
-          <div style="font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#ff8a8f;margin-bottom:16px;">Get in touch</div>
-          <div style="display:flex;flex-direction:column;gap:16px;">
-            <div><div style="font-size:13px;color:rgba(247,246,242,.6);margin-bottom:3px;">Email</div><div style="font-size:16px;font-weight:600;color:#fff;">hello@asean.org.au</div></div>
-          </div>
-        </div>
-        <div style="background:#fff;border:1px solid rgba(22,50,79,.09);border-radius:18px;padding:30px 32px;">
-          <div style="font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#B3262D;margin-bottom:16px;">Offices</div>
-          <div style="display:flex;flex-direction:column;gap:16px;">
-            <div><div style="font-weight:700;font-size:16px;color:#16324F;">Sydney</div><div style="font-size:14px;color:#5c6570;line-height:1.5;margin-top:3px;">Level 57, 25 Martin Place<br>Sydney NSW 2000, Australia</div></div>
-          </div>
-        </div>
-        <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=1200&q=80" alt="Map of offices" style="width:100%;object-fit:cover;display:block;height:180px;border-radius:18px;">
+        <div ref="{{ newsOk }}" role="status" style="display:none;font-size:13.5px;color:#fff;margin-top:12px;">Thanks — you&#39;re subscribed.</div>
       </div>
     </div>
-  </div>
-
-  <div style="max-width:1240px;margin:0 auto;padding:20px 48px 84px;">
-    <div style="border-top:1px solid rgba(22,50,79,.1);padding-top:36px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;">
-      <div style="font-size:16px;color:#4a5560;">Prefer to join straight away?</div>
-      <a class="btn" href="Membership.dc.html" style="background:#16324F;color:#fff;font-weight:600;font-size:15px;padding:15px 30px;border-radius:10px;">Become a Member</a>
+    <div style="display:flex;justify-content:space-between;align-items:center;padding-top:26px;font-size:12.5px;color:rgba(247,246,242,.55);flex-wrap:wrap;gap:12px;">
+      <span>© 2026 ASEAN Australia Association. All rights reserved.</span>
+      <span>Privacy · Terms · Partners</span>
     </div>
   </div>
-
-  <dc-import name="Footer" hint-size="100%,420px"></dc-import>
 </div>
 </x-dc>
-<script type="text/x-dc" data-dc-script>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1240,&quot;height&quot;:420}}">
 class Component extends DCLogic {
-  constructor(props){ super(props); this.formRef = React.createRef(); this.okRef = React.createRef(); this.errRef = React.createRef(); }
+  constructor(props){ super(props); this.newsRef = React.createRef(); this.newsOk = React.createRef(); }
   componentDidMount(){
-    const form = this.formRef.current, ok = this.okRef.current, err = this.errRef.current;
-    if(!form) return;
-    form.addEventListener('submit', (e) => {
+    const f = this.newsRef.current, ok = this.newsOk.current;
+    if(!f) return;
+    f.addEventListener('submit', (e) => {
       e.preventDefault();
-      if(!form.checkValidity()){
-        if(err) err.style.display = 'block';
-        const bad = form.querySelector(':invalid');
-        if(bad) bad.focus();
-        return;
-      }
-      if(err) err.style.display = 'none';
-      form.style.display = 'none';
-      if(ok){ ok.style.display = 'block'; ok.focus && ok.focus(); }
+      if(!f.checkValidity()){ f.reportValidity && f.reportValidity(); return; }
+      f.style.display = 'none';
+      if(ok) ok.style.display = 'block';
     });
   }
-  renderVals(){ return { formRef: this.formRef, okRef: this.okRef, errRef: this.errRef }; }
+  renderVals(){ return { newsRef: this.newsRef, newsOk: this.newsOk }; }
 }
 </script>
 </body>
